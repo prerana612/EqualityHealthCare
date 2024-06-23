@@ -1,0 +1,18 @@
+<div class="loginform">
+  <div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+  <form id="submitForm" [formGroup]="loginForm">
+    <h3>Login Here</h3>
+
+    <label for="username">Username</label>
+    <input formControlName="username">
+
+    <label for="password">Password</label>
+    <input type="password" formControlName="password">
+    <button style="color: #080710;" type="submit" (click)="login()"> Log In </button>
+
+    <p *ngIf="msg == 'Invalid username or password'" class="error">{{msg}}</p>
+  </form>
+</div>

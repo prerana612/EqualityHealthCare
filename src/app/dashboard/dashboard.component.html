@@ -1,0 +1,101 @@
+<header id="header" class="">
+    <div class="container main-menu">
+        <div class="row main-header">
+            <div id="logo">
+                <a href="https://www.evital.in/"><img
+                        src="../../assets/logo.png" alt="eVital"></a>
+            </div>
+
+            <div class="jclp-search new-header-search">
+                <div class="product-search">
+                    <mat-icon>search</mat-icon>
+
+                    <div class="bottom-part search-part">
+                        <input type="text" name="searchmedicine" id="searchmedicine" placeholder="Search Medicine here"
+                            onfocus="this.placeholder = 'Type atleast 3 letters'"
+                            onblur="this.placeholder = 'Search Medicine here'" class="autofill" autocomplete="off"
+                            autocorrect="off" autocapitalize="off" spellcheck="false" [(ngModel)]="searchstring"
+                            (keyup.enter)="searchMedicine()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<span class="landing-page-template" *ngIf="!isSearchMedicine">
+    <div class="home-banner-area"
+        style="background-image: url(../../assets/bg1.png);">
+        <div class="container1">
+            <div class="  row fullscreen d-flex align-items-center justify-content-between">
+                <div class="home-banner-content">
+                    <form id="reload_page">
+                        <input type="hidden" name="only_reload_page" value="true">
+                    </form>
+                    <h1>
+                        Order Medicines from Your Neighborhood Pharmacy
+                    </h1>
+                    <p>eVital connects you and your Trusted Local Pharmacy</p>
+                    <div class="download-button">
+                        <div>
+                            <span><img
+                                    src="../../assets/GooglePlay.png"
+                                    alt="gpay-btn"></span>
+                        </div>
+                        <div>
+                            <span>
+                                <img src="../../assets/AppStore.png"
+                                    alt="appstore-btn">
+                            </span>
+                        </div>
+                        <div>
+                            <img src="https://d2y3dr3ntinsxn.cloudfront.net/images/landing_page_img/evitalappdownload.svg"
+                                style="height: 85px;width: 85px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-img col-md-6 col-sm-12">
+                    <img class="img-fluid"
+                        src="../../assets/banner-img.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</span>
+
+
+<div class="medicine-container" *ngIf=" medicines?.length && isSearchMedicine">
+    <mat-card class="example-card" [routerLink]="['/checkout', medicine?.medicine_id]" appearance="outlined"
+        style="margin: 100px;" *ngFor="let medicine of medicines">
+        <img mat-card-image src="assets/dummy%20medicine%20image.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <div class="medicine-details">
+                <div class="med-name">
+                    <a target="_blank">
+                        {{medicine.medicine_name}}
+                    </a>
+                </div>
+
+                <div class="brand-info">
+                    <div class="brand-name">
+                        {{medicine?.manufacturer_name}}
+                    </div>
+                    <div class="packing">
+                        {{medicine?.packing_size}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="price-container">
+                <div class="price-section">
+                    <div class="price theme-color">
+                        ₹ {{medicine?.price}}
+                    </div>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+<div *ngIf="!medicines?.length && isSearchMedicine">
+    <h4 class="noData">Could not found '{{searchstring}}'</h4>
+</div>

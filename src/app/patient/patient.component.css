@@ -1,0 +1,33 @@
+.patient-form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.half-width {
+  width: calc(50% - 10px);
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+.row{
+  display: flex;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+button[type="submit"] {
+  background-color: #1976d2; /* blue submit button */
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #1565c0; /* darker blue on hover */
+}

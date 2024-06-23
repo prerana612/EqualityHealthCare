@@ -1,0 +1,50 @@
+<div style="text-align: center;">
+  <h1>Patient Form</h1>
+  <form [formGroup]="patientForm" class="patient-form">
+
+    <div class="row">
+      <mat-form-field appearance="outline" class="half-width">
+        <mat-label>First Name *</mat-label>
+        <input matInput type="text" id="first_name" formControlName="first_name"
+          required>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="half-width">
+        <mat-label>Last Name</mat-label>
+        <input matInput type="text" id="last_name" formControlName="last_name" >
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Zip Code *</mat-label>
+      <input matInput id="zipcode" formControlName="zipcode" required >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Mobile *</mat-label>
+      <input matInput id="mobile" formControlName="mobile" required >
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Date of Birth (YYYY-MM-DD)</mat-label>
+      <input matInput type="text" id="dob" formControlName="dob">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Gender</mat-label>
+      <mat-select id="gender" formControlName="gender">
+        <mat-option value="male">Male</mat-option>
+        <mat-option value="female">Female</mat-option>
+        <mat-option value="other">Other</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Blood Group</mat-label>
+      <input matInput type="text" id="blood_group" formControlName="blood_group">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!patientForm.valid"
+      (click)="onSubmit()">Submit</button>
+  </form>
+</div>

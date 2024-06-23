@@ -1,0 +1,11 @@
+<div class="success-notification">
+	<mat-icon class="success-icon">check_circle</mat-icon>
+	<div class="message">
+	  <h2>{{ orderResponse?.status_message }}</h2>
+	  <p>{{ orderResponse?.data?.thankyou_msg_first }} {{orderResponse?.data?.thankyou_msg_second}}</p>
+	  <p><strong>{{ orderResponse.data.pharmacy_name }}</strong></p>
+
+	  <button mat-raised-button style="color: green;" (click)="goToLandingPage()">Order More</button>
+	</div>
+  </div>
+  

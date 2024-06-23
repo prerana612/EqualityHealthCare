@@ -1,0 +1,163 @@
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 2%;
+    font-family: 'Manrope', sans-serif;
+}
+
+.product {
+    display: flex;
+}
+
+.medicine-content .product .product-img-slider {
+    width: 37%;
+    padding-right: 15px;
+}
+
+.owl-carousel.owl-loaded {
+    display: block;
+}
+
+.owl-carousel {
+    width: 100%;
+    z-index: 1;
+}
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-slider .item {
+    height: 420px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.medicine-content .product .product-details {
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    padding-left: 15px;
+}
+
+.product-details .product-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 2px solid #ebebeb;
+    padding-bottom: 25px;
+}
+
+.product-details .product-header .title {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.product-details .product-header .title .packing {
+    color: #777;
+    margin-top: -25px;
+}
+
+.product-details .product-header .title h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #044c9d;
+}
+
+.product-details .product-header .price {
+    font-weight: 700;
+    color: #044c9d;
+    font-size: 16px;
+}
+
+.product-details .product-header .product-cart-btn {
+    margin-left: 35px;
+}
+
+
+
+.product-details .product-header .product-cart-btn .btn {
+    font-size: 14px;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.prodcut-discriptions.medicine-tabs-details.active {
+    display: block;
+}
+
+.prodcut-discriptions .item {
+    margin-bottom: 50px;
+}
+
+.item {
+    cursor: pointer;
+}
+
+.prodcut-discriptions h3 {
+    font-size: 18px;
+    margin-bottom: -8px;
+}
+
+.prodcut-discriptions h4 {
+    font-size: 14px;
+    color: #044c9d;
+    margin-bottom: 4px;
+}
+
+.prodcut-discriptions p:last-child {
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.prodcut-discriptions p {
+    color: #333;
+    padding: 0;
+    margin-top: -10px;
+}
+
+a,
+a:focus,
+a:hover {
+    text-decoration: none;
+    outline: 0;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+ .itemDescription{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.imageContainer{
+    width: 100px;
+}
+
+.description{
+    width: fit-content;
+}
+
+.item h4 , h6{
+    color: #044c9d;
+}

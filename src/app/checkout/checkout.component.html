@@ -1,0 +1,132 @@
+<mat-toolbar style="background: #438fe5; color: white;">
+    <span> Medicine detail</span>
+</mat-toolbar>
+<div class="container">
+    <div class="content-inner">
+        <div class="medicine-content">
+            <div class="product">
+                <div class="product-img-slider">
+                    <div class="owl-carousel product-slider owl-theme owl-loaded owl-drag">
+
+                        <div class="owl-stage-outer">
+                            <div class="owl-stage"
+                                style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 429px;">
+                                <div class="owl-item active" style="width: 429px;">
+                                    <div class="item" [ngStyle]="{ 'background-image': 'url(' + imageUrl + ')' }">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <div class="product-header">
+                        <div class="title">
+                            <h1>{{medicineDetail?.medicine_name}}</h1>
+                            <div class="packing">
+                                {{medicineDetail?.packing_size}}
+                            </div>
+                        </div>
+                        <div class="price">
+                            <label class="price">₹{{medicineDetail?.mrp}}</label>
+                        </div>
+                        <div class="product-cart-btn hide">
+                            <a class="btn dark-btn medium-btn icon-left add-cart">
+                                <button mat-raised-button (click)="placeOrder()">Place Order</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="prodcut-discriptions medicine-tabs-details tab-details active">
+                        <div class="item">
+                            <h3>Overview</h3>
+                            <h4>Manufacturer</h4>
+                            <p><a href="https://www.evital.in/brands/Klarris-Pharmaceuticals-Pvt-Ltd-107962/"
+                                    target="_blank">{{medicineDetail?.manufacturer_name}}</a></p>
+
+                            <h4>Salt Composition</h4>
+                            <p>{{medicineDetail?.content}}</p>
+
+                            <h4>Side Effects</h4>
+                            <p>{{medicineDetail?.side_effects}}</p>
+
+                            <h4>How to use {{medicineDetail?.medicine_name}}</h4>
+                            <p>{{medicineDetail?.how_to_use}}</p>
+
+                            <h4>How {{medicineDetail?.medicine_name}} works</h4>
+                            <p>{{medicineDetail?.how_medicine_works}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <h4>Ltk 50 Tablet related warnings</h4>
+                <div class="itemDescription">
+                    <div class="imageContainer">
+                        <img src="../../assets/medicin-icon-alchohol.png" alt="Alcohol"
+                            width="70px">
+                    </div>
+                    <div class="description">
+                        <h6>Alcohol</h6>
+                        <p>{{medicineDetail?.alcohol}}</p>
+                    </div>
+                </div>
+
+                <div class="itemDescription">
+                    <div class="imageContainer">
+                        <img src="../../assets/medicin-icon-pregnancy.png" alt="Pregnancy"
+                            width="70px">
+                    </div>
+                    <div class="description">
+                        <h6>Pregnancy</h6>
+                        <p>{{medicineDetail?.pregnancy}}</p>
+                    </div>
+                </div>
+
+                <div class="itemDescription">
+                    <div class="imageContainer">
+                        <img src="../../assets/medicin-icon-lactation.png"
+                            alt="Lactation" width="70px">
+                    </div>
+                    <div class="description">
+                        <h6>Lactation</h6>
+                        <p>{{medicineDetail?.lactation}}</p>
+                    </div>
+                </div>
+
+                <div class="itemDescription">
+                    <div class="imageContainer">
+                        <img src="../../assets/medicin-icon-driving.png" alt="Driving"
+                            width="70px">
+                    </div>
+                    <div class="description">
+                        <h6>Driving</h6>
+                        <p>{{medicineDetail?.driving}}</p>
+                    </div>
+                </div>
+
+                <div class="itemDescription">
+                    <div class="imageContainer">
+                        <img src="../../assets/medicin-icon-kidney.png" alt="Kidney"
+                            width="70px">
+                    </div>
+                    <div class="description">
+                        <h6>Kidney</h6>
+                        <p>{{medicineDetail?.kidney}}</p>
+                    </div>
+                </div>
+
+                <div class="itemDescription">
+                    <div class="imageContainer">
+                        <img src="../../assets/medicin-icon-liver.png" alt="Liver"
+                            width="70px">
+                    </div>
+                    <div class="description">
+                        <h6>Liver</h6>
+                        <p>{{medicineDetail?.liver}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

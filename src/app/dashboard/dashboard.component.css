@@ -1,0 +1,215 @@
+#header {
+    padding: 0px 0px 20px 0px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+    z-index: 997;
+}
+
+.row{
+    align-items: center;
+    display: flex;
+}
+.main-header{
+    margin-left: 4%;
+    margin-top: 1%;
+}
+
+#header #logo img {
+    padding: 0;
+    margin: 0;
+}
+#logo img {
+    width: 140px;
+}
+
+.jclp-search {
+    margin-left: 30px;
+}
+
+.jclp-search .product-search {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: #044C9D;
+    border-radius: 21px;
+    height: 42px;
+    width: 412px;
+    padding: 0 15px;
+}
+
+.jclp-search mat-icon {
+    color: #ffffff; 
+    margin: 0px 10px;
+}
+
+.product-search {
+    max-width: 720px;
+    margin: 0 auto;
+    z-index: 99;
+    position: relative;
+}
+
+.product-search:after {
+    position: absolute;
+    content: "";
+    color: #000000a6;
+    top: 52px;
+    z-index: 9999;
+    font-size: 12px;
+    left: 70px;
+    font-weight: 600;
+}
+
+.product-search input[type=text] {
+    height: 38px;
+    width: 342px;
+    padding: 0px 15px; 
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;    
+    outline: 0 !important;
+}
+
+.home-banner-area {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.container1 {
+    max-width: 1230px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.banner-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-button{
+    display: flex;
+}
+
+.download-button span img {
+    width: 165px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.home-banner-area .banner-img {
+    text-align: right;
+    margin-top: 5%;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10%;
+}
+
+.noData{
+    padding: 73px;
+}
+
+/* mat card */
+.example-card {
+    flex: 1 1 calc(33.333% - 32px); 
+    max-width: calc(33.333% - 32px); 
+    box-sizing: border-box; 
+    margin: 16px; 
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .medicine-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    gap: 16px; 
+    padding: 16px; 
+  }
+
+   .medicine-details {
+    min-height: 130px;
+    margin-top: 10px;
+}
+.med-name {
+    font-style: normal;
+    font-weight: 600;
+    color: #044c9d;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+a, a:focus, a:hover {
+    text-decoration: none;
+    outline: 0;
+    color:#044c9d ;
+    font-weight: 500;
+}
+.brand-name {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+ .packing {
+    color: #777;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+   .price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price-container .price-section .price {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.theme-color {
+    color: #044c9d;
+}
+
+/* mat card end */
+
+@media (max-width: 900px) {
+    .example-card {
+      flex: 1 1 calc(50% - 32px); 
+      max-width: calc(50% - 32px);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .example-card {
+      flex: 1 1 calc(100% - 32px); 
+      max-width: calc(100% - 32px);
+    }
+  }
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        -ms-flex: 0 0 50%;
+        -webkit-box-flex: 0;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media (max-width: 1300px) {
+    .container.main-menu {
+        padding: 15px 30px 0px;
+    }
+}
+@media (max-width: 1300px) {
+    .container {
+        padding: 0px 30px;
+    }
+}

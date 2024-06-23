@@ -1,0 +1,78 @@
+<div *ngIf="!orderedSuccessfully">
+<mat-toolbar style="background: #438fe5; color: white;">
+  <span> Order Detail</span>
+</mat-toolbar>
+<form [formGroup]="orderForm" (ngSubmit)="onSubmit()" class="form-container">
+    <div class="form-row">
+    
+      <mat-form-field class="form-field" appearance="outline">
+        <input matInput formControlName="quantity" placeholder="Quantity">
+      </mat-form-field>
+   
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>Delivery Type</mat-label>
+      <mat-select formControlName="delivery_type" placeholder="Delivery Type">
+        <mat-option value="pickup">Pickup</mat-option>
+        <mat-option value="delivery">Delivery</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+    <div *ngIf="orderForm.get('delivery_type')?.value === 'delivery'" class="form-row">
+      <mat-form-field class="form-field" appearance="outline">
+        <input matInput formControlName="address" placeholder="Address">
+      </mat-form-field>
+    </div>
+  
+    <div class="form-row">
+      <mat-form-field class="form-field" appearance="outline">
+        <input matInput formControlName="zipcode" placeholder="Zipcode">
+      </mat-form-field>
+    </div>
+  
+    <div class="form-row">
+      <mat-form-field class="form-field" appearance="outline">
+        <input matInput formControlName="city" placeholder="City">
+      </mat-form-field>
+    
+      <mat-form-field class="form-field" appearance="outline">
+        <input matInput formControlName="state" placeholder="State">
+      </mat-form-field>
+    </div>
+  
+    <div class="form-row">
+      <mat-form-field class="form-field" appearance="outline">
+        <input matInput formControlName="mobile" maxlength="10" placeholder="Mobile">
+      </mat-form-field>
+    
+      <mat-form-field class="form-field" appearance="outline">
+        <input matInput formControlName="patient_name" placeholder="Patient Name">
+      </mat-form-field>
+    </div>
+  
+    <div class="form-row">
+      <mat-form-field class="form-field" appearance="outline">
+        <input matInput formControlName="latitude" placeholder="Latitude">
+      </mat-form-field>
+    
+      <mat-form-field class="form-field" appearance="outline">
+        <input matInput formControlName="longitude" placeholder="Longitude">
+      </mat-form-field>
+    </div>
+  
+    <mat-form-field class="form-field" appearance="outline">
+      <input matInput formControlName="full_address" placeholder="Full Address">
+    </mat-form-field>
+
+    <div class="errorMsg" *ngIf="orderForm.errors?.['addressRequired']">
+      <span class="error">*Either latitude and longitude or full address is required.</span>
+    </div>
+    <button mat-raised-button type="submit" >Submit</button>
+  </form>
+</div>
+<div *ngIf="orderedSuccessfully">
+  <app-order-detail-response
+  [orderResponse]="orderResponse"
+ >
+</app-order-detail-response>  
+</div>

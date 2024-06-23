@@ -1,0 +1,22 @@
+<mat-toolbar style="background-color: rgba(241, 241, 241, 0.9);">
+  <span>Landing Page</span>
+  <span class="spacer"></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/dashboard">
+      <mat-icon>dashboard</mat-icon>
+      <span>Dashboard</span>
+    </button>
+    <button mat-menu-item routerLink="/patient-form">
+      <mat-icon>person_add</mat-icon>
+      <span>Add Patient</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
+
+<div class="content">
+  <footer>
+    <p>&copy; 2024 EvitalRX. All rights reserved.</p>
+  </footer>
